@@ -4,9 +4,10 @@ Keylogger
 Simple keylogger who sends the information throught Discord webhooks. Only made for educational purposes!
 
 ## Requirements
-You need to install the pynput module.
+You need to install the pynput and dhooks module.
 ```
 pip3 install pynput
+pip3 install dhooks
 ```
 
 ## Usage
