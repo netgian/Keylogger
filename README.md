@@ -10,6 +10,7 @@ pip install -r requirements.txt
 
 ## 🤖 〢 Usage
 This script sends keystrokes throught Discord webhooks.\
+\
 Open the script and change this variables to you personal configuration.
 ```python
 WEBHOOK_URL = ""  # Put here your discord webhook url.
