@@ -1,5 +1,5 @@
 <h1 align="center">NetGian Keylogger</h1>
-<h3 align="center">~ ~ Python keylogger that sends keystrokes throught a Discord webhook ~ ~</h3>
+<h3 align="center">~ ~ Python keylogger that sends keystrokes throught a Discord Webhook ~ ~</h3>
 
 **Note:** \
 This script was made for educational purposes, therefor all consequences caused by your actions are your responsibility and accountability.
