@@ -1,4 +1,5 @@
 <h1 align="center">NetGian Keylogger</h1>
+<h6 align="center">Python keylogger that sends keystrokes throught a Discord webhook.</h6>
 
 **Note:** \
 This script was made for educational purposes, therefor all consequences caused by your actions are your responsibility and accountability.
@@ -9,8 +10,6 @@ pip install -r requirements.txt
 ```
 
 ## 🤖 〢 Usage
-This script sends keystrokes throught Discord webhooks.\
-\
 Open the script and change this variables to you personal configuration.
 ```python
 WEBHOOK_URL = ""  # Put here your discord webhook url.
@@ -20,7 +19,7 @@ Once you saved your configuration, run the script
 ```
 python chrome.py
 ```
-This script sends keystrokes throught Discord webhooks.
+
 
 ## 🔍 〢 Tested on:
 - Windows 10
