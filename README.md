@@ -15,7 +15,7 @@ Open the script and change this variables to you personal configuration.
 WEBHOOK_URL = ""  # Put here your discord webhook url.
 INTERVAL = 60  # You'll get the info every 60 seconds.
 ```
-Once you saved your configuration, run the script
+Once you saved your configuration, you can run the script.
 ```
 python chrome.py
 ```
