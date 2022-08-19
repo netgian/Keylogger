@@ -17,7 +17,7 @@ INTERVAL = 60  # You'll get the info every 60 seconds.
 ```
 Once you saved your configuration, you can run the script.
 ```
-python chrome.py
+python keylogger.py
 ```
 
 
