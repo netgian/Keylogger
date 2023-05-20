@@ -2,7 +2,7 @@
 <h3 align="center">~ ~ Python keylogger that sends keystrokes throught a Discord Webhook ~ ~</h3>
 
 **Note:** \
-This script was made for educational purposes, therefor all consequences caused by your actions are your responsibility and accountability.
+This script was created for educational purposes. Therefore, any consequences resulting from your actions are your responsibility and accountability.
 
 ## ⚙️ 〢 Setup
 ```
